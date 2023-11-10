@@ -1,4 +1,7 @@
-@regression
+@regression @login
+
+  # @wip --> work in progress
+  # To find all related syntax or words or tags --> ctrl + shift + F
 Feature: DevEx log in test
   #Agile Story: As a user, I should be able to log in, so that I can see my dashboard.
 
@@ -14,17 +17,13 @@ Feature: DevEx log in test
     When The user enters student credentials
     Then The user should be able to login
 
-  @developer @smoke
+  @developer @smoke @db
   Scenario: Log ins as a developer
     Given  The user is on the log in page
     When The user enters developer credentials
     Then The user should be able to login
 
-  @teacher
-  Scenario: Log ins as a SDET
-    Given  The user is on the log in page
-    When The user enters SDET credentials
-    Then The user should be able to login
+
 
     # -Write scenarios in navigationMenu.feature
     #-Create step definitions

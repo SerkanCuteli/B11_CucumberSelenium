@@ -1,4 +1,4 @@
-@navigationMenu
+@navigationMenu @regression
 Feature: Navigation Menu Task
 
   Scenario: Navigation to Developers Menu
