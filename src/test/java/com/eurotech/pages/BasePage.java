@@ -37,4 +37,9 @@ public abstract class BasePage {
         Driver.get().findElement(By.xpath("//span[text()='"+subMenuName+"']")).click();
     }
 
+    public String getHeaderText(String headerName){
+        //return Driver.get().findElement(By.xpath("//*[text()='"+headerName+"']")).getText();
+        return Driver.get().findElement(By.xpath("//section[@class='container']/*[text()='"+headerName+"']")).getText();
+    }
+
 }
