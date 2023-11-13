@@ -31,8 +31,8 @@ public class DashboardPage extends BasePage {
     @FindBy(linkText = "Add Education")
     public WebElement addEdu;
 
-    @FindBy(css = ".btn.btn-light")
-    public List<WebElement> dashboardList;
+    @FindBy(css = ".btn.btn-light") //#dashboard-edit-container>a
+    public List<WebElement> dashboardEditList;
 
     @FindBy(id = "navbar-menu-list-item1-myposts")
     public WebElement myposts;

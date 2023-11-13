@@ -5,21 +5,24 @@
 Feature: DevEx log in test
   #Agile Story: As a user, I should be able to log in, so that I can see my dashboard.
 
+  Background:
+    Given The user is on the log in page
+
   @teacher @smoke
   Scenario: Log in as a teacher
-    Given The user is on the log in page
+    #Given The user is on the log in page
     When The user enters teacher credentials
     Then The user should be able to login
 
-  @student @developer
+  @student @smoke @test
   Scenario: Log ins as a student
-    Given  The user is on the log in page
+    #Given  The user is on the log in page
     When The user enters student credentials
     Then The user should be able to login
 
-  @developer @smoke @db
+  @developer @db
   Scenario: Log ins as a developer
-    Given  The user is on the log in page
+    #Given  The user is on the log in page
     When The user enters developer credentials
     Then The user should be able to login
 

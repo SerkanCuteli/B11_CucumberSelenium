@@ -1,4 +1,4 @@
-
+@loginWithParameter @smoke
 Feature: Log in as different user
   #Agile Story : As a user, I should be able to log in as different user
 
@@ -12,7 +12,7 @@ Feature: Log in as different user
     Given The user is on the log in page
     When The user logs in using "sdetb11@eurotech.study" and "Test1234"
     Then The user should be able to login
-    And The welcome message contains "sdet11"
+    And The welcome message contains "sdetb11"
 
     #HOMEWORK
   #Crate a new feature file named navigateMenuWithParameters.feature
