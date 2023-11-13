@@ -2,12 +2,14 @@ package com.eurotech.stepDefinitions;
 
 import com.eurotech.pages.DashboardPage;
 import com.eurotech.pages.LoginPage;
+import com.eurotech.utulities.BrowserUtils;
 import com.eurotech.utulities.ConfigurationReader;
 import com.eurotech.utulities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 public class Login_StepDefs {
     LoginPage loginPage = new LoginPage();
@@ -52,5 +54,16 @@ public class Login_StepDefs {
         Assert.assertTrue(dashboardPage.welcomeMessage.getText().contains(user));
 
     }
+
+    @Then("The user should be able to see message as {string}")
+    public void the_user_should_be_able_to_see_message_as(String expectedMessage) {
+        // to find totally disappearing warning message
+//        String validationMessage = loginPage.userEmailInput.getAttribute("validationMessage");
+//        System.out.println("validationMessage = " + validationMessage);
+//        Assert.assertEquals(expectedMessage,validationMessage);
+        BrowserUtils.waitFor(2);
+        String actualMessage = loginPage.getDisappearingWarningMessage(expectedMessage);
+        Assert.assertEquals(expectedMessage,actualMessage);
+          }
 
 }

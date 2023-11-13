@@ -22,7 +22,7 @@ Feature: Dashboard Page Menu
       | Developers |
       | All Posts  |
       | My Account |
-  @wip
+
   Scenario: User should be able to see Dashboard Menu after log in
     Given The user is on the log in page
     When The user logs in using "eurotech@gmail.com" and "Test12345!"
