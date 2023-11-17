@@ -10,7 +10,7 @@ Feature: Negative Login Test
   # Create Step Def class and if needed create locators and methods in related page class
 
 
-  @wip
+
   Scenario Outline: Negative login test
     Given The user is on the log in page
     When The user logs in using "<userType>" and "<password>"
