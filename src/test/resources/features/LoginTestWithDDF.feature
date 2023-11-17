@@ -4,8 +4,16 @@ Feature: Data Driven Testing in Cucumber
   Scenario Outline: DDF Login Test
     Given The user is on the log in page
     When The user enters "<sheetName>" and row number <rowNumber>
-    Then The user verifies that welcome message contains in excel "<sheetName>" <rowNumberForName>
+    Then The user verifies that welcome message contains in excel "<sheetName>" <rowNumber>
+    And The user verifes that "<infoTitle>" info in excel "<sheetName>" <rowNumber>
     Examples:
-      | sheetName | rowNumber | rowNumberForName |
-      | Test Data | 0         | 0                |
+      | sheetName | rowNumber | infoTitle |
+      | Test Data | 0         | Company   |
+      | Test Data | 1         | Title     |
+      | Test Data | 2         | Company   |
+      | Test Data | 3         | Title     |
+      | Test Data | 4         | Company   |
+      | Test Data | 5         | Title     |
+      | Test Data | 6         | Company   |
+      | Test Data | 7         | Title     |
 
