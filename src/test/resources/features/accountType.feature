@@ -1,4 +1,4 @@
-
+@parallelExecution
 Feature: Account Type
 
   Background:

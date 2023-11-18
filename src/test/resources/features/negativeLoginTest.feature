@@ -1,3 +1,4 @@
+@parallelExecution
 Feature: Negative Login Test
 
 

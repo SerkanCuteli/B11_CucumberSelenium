@@ -1,6 +1,6 @@
 Feature: Data Driven Testing in Cucumber
 
-  @ddf_test
+  @ddf_test @parallelExecution @smoke
   Scenario Outline: DDF Login Test
     Given The user is on the log in page
     When The user enters "<sheetName>" and row number <rowNumber>

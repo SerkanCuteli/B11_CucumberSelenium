@@ -11,7 +11,7 @@ Feature: Dashboard Page Menu
       | All Posts  |
       | My Account |
 
-
+  @parallelExecution
   Scenario: Log in as a specific user
     Given The user is on the log in page
     When The user logs in using following credentials

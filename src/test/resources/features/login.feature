@@ -1,4 +1,4 @@
-@regression @login
+@regression @login @parallelExecution
 
   # @wip --> work in progress
   # To find all related syntax or words or tags --> ctrl + shift + F
