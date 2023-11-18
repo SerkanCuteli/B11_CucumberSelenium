@@ -5,9 +5,12 @@ import com.eurotech.utulities.BrowserUtils;
 import com.eurotech.utulities.Driver;
 import com.eurotech.utulities.ExcelUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.Map;
@@ -17,6 +20,8 @@ public abstract class BasePage {
 
         PageFactory.initElements(Driver.get(), this);
     }
+
+    WebDriverWait wait = new WebDriverWait(Driver.get(),10);
 
     @FindBy(className = "nav__menu-item")
     public List<WebElement> menuList;
@@ -49,6 +54,13 @@ public abstract class BasePage {
         List<Map<String, String>> dataList = excelUtil.getDataList();
         return dataList;
 
+    }
+
+    public void click(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+    public void click(By locator){
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
 }
