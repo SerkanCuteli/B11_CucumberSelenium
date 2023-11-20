@@ -26,7 +26,7 @@ public class Driver {
         if (driverPool.get() == null) {
             // if we pass the driver from terminal then use that one
             // if we do not pass the driver from terminal then use the one properties file
-            String browser = System.getProperty("browser")!= null ? browser = System.getProperty("browser") : ConfigurationReader.get("browser");
+            String browser = System.getProperty("browser") != null ? browser = System.getProperty("browser") : ConfigurationReader.get("browser");
             switch (browser.toLowerCase()) {
                 case "chrome": // Chrome - CHROME - cHROME
                     WebDriverManager.chromedriver().setup(); // use only selenium-java => before version 4.6... after delete this line
