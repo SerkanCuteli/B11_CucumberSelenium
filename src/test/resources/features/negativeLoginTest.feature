@@ -12,6 +12,7 @@ Feature: Negative Login Test
 
 
 
+  @grid
   Scenario Outline: Negative login test
     Given The user is on the log in page
     When The user logs in using "<userType>" and "<password>"
