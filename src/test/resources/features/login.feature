@@ -20,7 +20,7 @@ Feature: DevEx log in test
     When The user enters student credentials
     Then The user should be able to login
 
-  @developer @db
+  @developer
   Scenario: Log ins as a developer
     #Given  The user is on the log in page
     When The user enters developer credentials
