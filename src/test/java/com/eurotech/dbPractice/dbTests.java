@@ -9,9 +9,9 @@ public class dbTests {
     public void dbTest() throws Exception {
 
         DBUtils.createConnection();
-
         DBUtils.getRowList("select * from user");
         System.out.println("DBUtils.getRowCount() = " + DBUtils.getRowCount());
         DBUtils.destroy();
     }
 }
+
