@@ -3,7 +3,7 @@ package com.eurotech.dbPractice;
 import com.eurotech.utulities.DBUtils;
 import org.junit.Test;
 
-public class dbTests {
+public class DbTests {
 
     @Test
     public void dbTest() throws Exception {

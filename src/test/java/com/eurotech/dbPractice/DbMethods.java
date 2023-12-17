@@ -5,7 +5,6 @@ import com.eurotech.utulities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-import javax.swing.*;
 import java.util.List;
 
 public class DbMethods {
